@@ -1,0 +1,15 @@
+.container{
+    position: relative;
+    height: 1000px;
+}
+.container::before{
+    content:"";
+    position: absolute;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://d1inegp6v2yuxm.cloudfront.net/royal-academy/image/upload/c_limit,cs_tinysrgb,dn_72,dpr_3.0,f_auto,fl_progressive.keep_iptc,w_400/wmhpdqqyaj9bkcowya6d.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}

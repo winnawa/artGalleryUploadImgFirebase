@@ -1,0 +1,11 @@
+.logo{
+    width: 150px;
+    height: 150px;
+    background-image: url("https://images.glints.com/unsafe/glints-dashboard.s3.amazonaws.com/company-logo/de98d35bc452a767d810997e70e6246a.jpg");
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    border-radius: 50%;
+    z-index: 1;
+    margin-bottom: 25px;
+}

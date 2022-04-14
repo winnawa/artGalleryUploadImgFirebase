@@ -1,0 +1,80 @@
+
+.headerContainer{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 150px;
+    font-size: 100%;
+}
+.headerContainer::before{
+    content: "";
+    position: absolute;
+    top : 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: black;
+    opacity: 0.4;
+}
+
+
+.logo{
+    width: 150px;
+    height: 150px;
+    background-image: url("https://images.glints.com/unsafe/glints-dashboard.s3.amazonaws.com/company-logo/de98d35bc452a767d810997e70e6246a.jpg");
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.headerName{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 25%;
+    font-size: 30px;
+    padding-left: 7.5px;
+    color: whitesmoke;
+    z-index: 1;
+}
+
+
+
+.childContainer{
+    position: absolute;
+    right: 0.1px;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.childContainer div{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color: whitesmoke;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+[class*="prop-"] {
+    width: 100%;
+}
+
+@media only screen and (max-width= 400px){
+    .prop-logo-1{height: 100px; width:100px}
+    .prop-headerName-2{height: 100px; width:100px}
+    .prop-menu-3{height: 100px; width:100px}
+
+}
+
+@media only screen and (min-width= 1000px){
+    
+}
