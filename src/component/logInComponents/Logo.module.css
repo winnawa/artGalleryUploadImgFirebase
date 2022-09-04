@@ -9,3 +9,10 @@
     z-index: 1;
     margin-bottom: 25px;
 }
+
+input{
+    width: 100%;
+}
+label{
+    width: 100%;
+}

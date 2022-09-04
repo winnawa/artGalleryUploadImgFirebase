@@ -2,6 +2,7 @@ import React from "react"
 import styles from './Header.module.css'
 import { auth } from "../../service/firebase"
 import { useNavigate } from "react-router-dom"
+import {Button} from 'react-bootstrap'
 
 
 const Header = ()=>{
@@ -13,7 +14,7 @@ const Header = ()=>{
         .then(()=>{
             navigate('/login', {replace:true})
         })
-        .catch((errors)=>{
+        .catch((errors : any)=>{
             console.log(errors)
         })
     }
@@ -21,21 +22,23 @@ const Header = ()=>{
 
 
     const galClickHandler = ()=>{
-        navigate('gallery');
+        navigate('/inside/gallery',{replace:true});
     }
     const uploadClickHandler = ()=>{
-        navigate('upload');
+        navigate('/inside/upload',{replace:true});
     }
 
     return(
         <div className={styles.headerContainer}>
             <div className= {styles.logo}></div>
-            <div className = {styles.headerName}>VIRTUAL SHOW ROOM</div>
+            <div className = {styles.headerName} >
+                <div className={styles.headerText} onClick={()=>{navigate('/inside',{replace:true});}}>    VIRTUAL SHOW ROOM </div>
+            </div>
             <div className={styles.childContainer}>
                 <div onClick={galClickHandler}>GALLERY</div>
                 <div onClick={uploadClickHandler}>UPLOAD</div>
-                <div>HELP</div>
-                <div><button onClick={signOutHandler}>SIGN OUT</button></div>
+                <div><a style={{textDecoration:"none", color:"white"}} href="#help">HELP</a></div>
+                <div className={styles.last}><Button variant="danger" className={styles.button} onClick={signOutHandler}>SIGN OUT</Button></div>
             </div>
 
         </div>
